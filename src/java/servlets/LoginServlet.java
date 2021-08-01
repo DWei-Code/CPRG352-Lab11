@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.invalidate(); // just by going to the login page the user is logged out :-) 
-        
+         
         Cookie[] cookies = request.getCookies();
         String email = CookieUtil.getCookieValue(cookies, "email");
         request.setAttribute("email", email);
